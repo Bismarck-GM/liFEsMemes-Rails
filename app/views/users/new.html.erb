@@ -1,12 +1,11 @@
-<%= form_with model: @user do |f|%>
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-two-fifths">
+    <h1 class="title">Sign Up</h1>
 
-  <section class="section">
-    <div class="columns is-centered">
-      <div class="column is-half">
-      <h1 class="title">Create a New User</h1>
+      <%= form_with model: @user do |f|%>
 
         <div class="card">
-
 
           <div class="field card-content pb-1">
             <%= f.label :name, "Username", class: 'label' %>
@@ -56,9 +55,7 @@
             <%= f.submit class: 'button is-link' %>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  </section>
-
-<% end %>
-
+  </div>
+</section>
