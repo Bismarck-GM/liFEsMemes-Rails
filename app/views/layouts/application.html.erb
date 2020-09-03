@@ -35,10 +35,14 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <%= link_to 'Sign Up', new_user_path, class: "navbar-item" %> |
-          <%= link_to 'Login', new_user_path, class: "navbar-item" %>
-        </div>
+          <%= link_to 'Sign Up', new_user_path, class: "navbar-item" %>
+      </div>
+
+      <div class="navbar-item">
+        | <%= link_to 'Login', new_session_path, class: "navbar-item" %>
+      </div>
+      <div class="navbar-item">
+        | <%= link_to 'LogOut', log_out_path, class: "navbar-item" %>
       </div>
     </div>
   </div>
