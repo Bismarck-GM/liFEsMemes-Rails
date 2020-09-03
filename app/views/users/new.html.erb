@@ -1,0 +1,64 @@
+<%= form_with model: @user do |f|%>
+
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-half">
+      <h1 class="title">Create a New User</h1>
+
+        <div class="card">
+
+
+          <div class="field card-content pb-1">
+            <%= f.label :name, "Username", class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.text_field :name, class: 'input', placeholder: 'Username' %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :email, class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.email_field :email, class: 'input', placeholder: 'Email' %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :password, class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.password_field :password, class: 'input' %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :password_confirmation, class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.password_field :password_confirmation, class: 'input' %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="control card-content pt-1">
+            <%= f.submit class: 'button is-link' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<% end %>
+
