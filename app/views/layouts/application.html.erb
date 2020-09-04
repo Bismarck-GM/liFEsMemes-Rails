@@ -10,19 +10,21 @@
   </head>
   <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item" href="#">
+      <div class='main-logo'>
+        <% image_tag("LifesMemesWhiteBackground-01FACE-01.png") %>
+      </div>
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: space-evenly;">
       <a class="navbar-item">
         Home
       </a>
@@ -50,4 +52,5 @@
   <body>
     <%= yield %>
   </body>
+
 </html>

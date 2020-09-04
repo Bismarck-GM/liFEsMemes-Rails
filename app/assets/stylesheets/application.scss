@@ -14,9 +14,21 @@
  *= require_self
  */
  @import "bulma";
-body {
+body, html {
   background-color: #4E443E;
 }
 .is-orange {
   background-color: #FD6000;
+}
+.main-logo {
+  background-image:url(LifesMemesWhiteBackground-01FACE-01.png);
+  width:  360px; /*or 70%, or what you want*/
+  height: 70px; /*or 70%, or what you want*/
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  border-radius: 40px;
 }

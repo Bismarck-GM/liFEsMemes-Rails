@@ -1,7 +1,7 @@
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-two-fifths">
-    <h1 class="title has-text-white">Sign Up</h1>
+    <h1 class="title has-text-white has-text-centered">Sign Up</h1>
 
       <% if flash[:errors] %>
         <% flash[:errors].each do |e| %>
@@ -10,7 +10,7 @@
       <% end %>
 
       <%= form_with model: @user do |f|%>
-        <div class="card">
+        <div class="card is-rounded">
           <div class="field card-content pb-1">
             <%= f.label :name, "Username", class: 'label' %>
             <p class="control has-icons-left has-icons-right">
@@ -55,7 +55,7 @@
             </p>
           </div>
 
-          <div class="control card-content pt-1">
+          <div class="control card-content pt-1 has-text-centered">
             <%= f.submit class: 'button is-orange has-text-white' %>
           </div>
 
