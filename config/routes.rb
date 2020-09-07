@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   resources :users, only: [:index, :create, :new]
   resources :sessions, only: [:create, :new]
-  
+  resources :articles
   get "log_out" => "sessions#destroy"
 end
