@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_user, :require_login
 
   def current_user
-    User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find_by_id(session[:user])
   end
 
   def require_login
     unless session[:user_id]
-      flash[:errors] = ["You must be loged in."]
+      flash[:notice] = ["You must be loged in."]
       redirect_to root_path
     end
   end

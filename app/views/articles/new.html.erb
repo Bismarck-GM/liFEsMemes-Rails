@@ -3,60 +3,48 @@
     <div class="column is-two-fifths">
     <h1 class="title has-text-white has-text-centered">Create a Meme Life Article!</h1>
 
-      <% if flash[:errors] %>
-        <% flash[:errors].each do |e| %>
+      <% if flash[:notice] %>
+        <% flash[:notice].each do |e| %>
           <p><%= e %></p>
         <% end %>
       <% end %>
 
       <%= form_with model: @article do |f|%>
         <div class="card is-rounded">
-          <div class="field card-content pb-1">
-            <%= f.label :name, "Username", class: 'label' %>
+          <div class="field card-content pb-3">
+            <%= f.label :title, "Title", class: 'label' %>
             <p class="control has-icons-left has-icons-right">
               
-              <%= f.text_field :name, class: 'input', placeholder: 'Username' %>
+              <%= f.text_field :title, class: 'input', placeholder: "Meme's title" %>
               <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-space-shuttle"></i>
               </span>
             </p>
           </div>
 
           <div class="field card-content pt-1 pb-1">
-            <%= f.label :email, class: 'label' %>
+            <%= f.label :text, 'Meme\'s History', class: 'label' %>
             <p class="control has-icons-left has-icons-right">
               
-              <%= f.email_field :email, class: 'input', placeholder: 'Email' %>
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
+              <%= f.text_area :text, class: 'textarea', placeholder: 'Write sumthing' %>
+
             </p>
           </div>
 
           <div class="field card-content pt-1 pb-1">
-            <%= f.label :password, class: 'label' %>
-            <p class="control has-icons-left has-icons-right">
-              
-              <%= f.password_field :password, class: 'input' %>
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
+            <%= f.label :image, 'Upload your meme', class: 'label' %>
+            <%= f.file_field :image, class: 'button' %>
           </div>
 
           <div class="field card-content pt-1 pb-1">
-            <%= f.label :password_confirmation, class: 'label' %>
-            <p class="control has-icons-left has-icons-right">
-              
-              <%= f.password_field :password_confirmation, class: 'input' %>
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
+            <%= f.label :category_ids, 'Categories', class: 'label' %>
+            <%= f.select(:category_ids, @categories, {}, { multiple: true, size: 5 }) %>
           </div>
+
+
 
           <div class="control card-content pt-1 has-text-centered">
-            <%= f.submit class: 'button is-orange has-text-white' %>
+            <%= f.submit 'Create Meme', class: 'button is-orange has-text-white' %>
           </div>
 
         </div>
