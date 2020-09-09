@@ -1,22 +1,33 @@
 class ArticlesController < ApplicationController
   before_action :require_login, only:[:new]
+  before_action :set_categories, only: [:new]
   def index
 
   end
 
   def new
     @article = Article.new
-    @categories = Category.all
   end
 
   def create
-    @article = current_user.articles.new(article_params)
+    @article = current_user.articles.build(article_params)
+    if @article.save
+      p @article
+      redirect_to root_path
+    else
+      flash[:notice] = @article.errors.full_messages
+      redirect_back(fallback_location:new_article_path)
+    end
   end
 
   
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, :categories)
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
+  end
+
+  def set_categories
+    @categories = Category.pluck('name', 'id')
   end
 end
