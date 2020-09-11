@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create name: "Leafy green", priority: 1, image: 'https://h2m4j5c4.rocketcdn.me/wp-content/uploads/2019/01/LeafyGreensTray-1170x781.jpg'
-Category.create name: "Cruciferous", priority: 2, image: 'https://fruitsandveggies.org/wp-content/uploads/2019/02/atb_032217_image.jpg'
-Category.create name: "Marrow", priority: 3, image: 'https://www.cooksinfo.com/wp-content/uploads/Marrow-Striped.jpg'
-Category.create name: "Root", priority: 4, image: 'https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/health-and-wellbeing/diet-and-nutrition/rootveg2shutterstock_365866316768x576.jpg'
+Category.create name: "Sports", priority: 1, image: 'https://www.fosi.org/media/images/22601782810_cbe3ede5f5_o.focus-none.original.jpg'
+Category.create name: "Classic", priority: 2, image: 'https://ligalive.net/wp-content/uploads/2020/03/no-football-on-tv-corona-meme-1200x1200.png'
+Category.create name: "New", priority: 3, image: 'https://duffy.agency/wp-content/uploads/2019/05/example-of-Dos-Equis-meme.png'
+Category.create name: "Programming", priority: 4, image: 'https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png'

@@ -1,0 +1,16 @@
+<div class="columns">
+  <%= image_tag("#{@article.image}", class: "main-article column" ) %>
+  <h2 class="image-article-title"><%= @article.title %></h2>
+  <h4 class="image-article-description"><%= @article.text %></h4>
+</div>
+
+<div class="columns">
+
+  <% @categories.each do |cat| %>
+    <a href="<%= category_path(cat.id) %>" class="column">
+      <div class="category-background-images" style="background-image: url(<%= cat.image %>);">
+        <%= cat.name %>
+      </div>
+    </a>
+  <% end %>
+</div>

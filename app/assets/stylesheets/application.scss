@@ -16,6 +16,7 @@
  @import "bulma";
 body, html {
   background-color: #4E443E;
+  color: white;
 }
 .is-orange {
   background-color: #FD6000;
@@ -31,4 +32,20 @@ body, html {
 
 .card {
   border-radius: 40px;
+}
+
+.column {
+  padding: 0px;
+}
+
+.category-background-images {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100%;
+}
+
+.main-article {
+  position: relative;
 }

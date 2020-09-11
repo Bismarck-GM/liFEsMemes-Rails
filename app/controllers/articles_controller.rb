@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :require_login, only:[:new]
   before_action :set_categories, only: [:new]
-  def index
 
+  def index
+    @article = Article.first
+    @categories = Category.all
   end
 
   def new
@@ -12,7 +14,7 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      p @article
+      flash[:notice] = ['Meme created successfully.']
       redirect_to root_path
     else
       flash[:notice] = @article.errors.full_messages
