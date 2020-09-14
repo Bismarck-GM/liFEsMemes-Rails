@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   resources :users, only: [:index, :create, :new]
   resources :sessions, only: [:create, :new]
-  resources :articles, only: [:create, :index, :new] do
+  resources :articles, only: [:create, :index, :new, :show] do
     resources :votes, only: [:create]
   end
   resources :categories, only: [:show]

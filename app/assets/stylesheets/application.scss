@@ -14,12 +14,18 @@
  *= require_self
  */
  @import "bulma";
+ @import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   background-color: #4E443E;
   color: white;
 }
 .is-orange {
-  background-color: #FD6000;
+  background-color: $orange;
 }
 .main-logo {
   background-image:url(LifesMemesWhiteBackground-01FACE-01.png);
@@ -38,6 +44,15 @@ body, html {
   padding: 0px;
 }
 
+.columns {
+  margin: 0px;
+  position: relative;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 0px;
+}
+
 .category-background-images {
   position: relative;
   background-repeat: no-repeat;
@@ -46,6 +61,23 @@ body, html {
   padding-top: 100%;
 }
 
-.main-article {
-  position: relative;
+.main-article-title, .main-article-description {
+  position: absolute;
+  padding-left: 1.5rem;
+}
+
+.main-article-title {
+  bottom: 20%;
+  font-size: 3rem;
+  color: $orange
+}
+
+.main-article-description {
+  bottom: 10%;
+  font-size: 2rem;
+}
+
+.main-article-image {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(0,0,0,0.011642156862745057) 100%);
 }
