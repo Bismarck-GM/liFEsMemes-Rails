@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.first
-    @categories = Category.all
+    @categories = Category.order_by_priority
   end
 
   def new
