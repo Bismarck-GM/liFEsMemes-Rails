@@ -1,0 +1,24 @@
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="<%= root_path %>">
+        <div class='main-logo'>
+          <% image_tag("LifesMemesWhiteBackground-01FACE-01.png") %>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: space-evenly;">
+      <%= link_to 'Home', root_path, class: "navbar-item" %>
+      <%= link_to 'Create a Meme', new_article_path, class: "navbar-item" %>
+    </div>
+    <div class="navbar-end">
+      <%= render render_navbar_links %>
+    </div>
+  </div>
+</nav>

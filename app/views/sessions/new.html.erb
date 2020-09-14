@@ -1,7 +1,7 @@
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-two-fifths">
-    <h1 class="title has-text-white">Log In</h1>
+    <h1 class="title has-text-white has-text-centered">Log In</h1>
 
       <% if flash[:notice] %>
         <% flash[:notice].each do |e| %>
@@ -34,7 +34,7 @@
             </p>
           </div>
 
-          <div class="control card-content pt-1">
+          <div class="control card-content pt-1 has-text-centered">
             <%= submit_tag "Sign In", class: 'button is-orange has-text-white' %>
           </div>
 
