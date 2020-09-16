@@ -1,10 +1,12 @@
-<br>
-<br>
-<% @articles.each do |article| %>
-  <%= article.title %>
-<% end %>
-
-<br>
-<br>
-
-<%= @articles.count %>
+<div class="category-grid">
+  <% @articles.each do |article| %>
+    <div class="item-wrapper">
+      <div class="category-grid-item">
+        <%= image_tag("#{article.image}") %>
+      </div>
+      <div class="category-grid-item">
+        <%= article.title %>
+      </div>
+    </div>
+  <% end %>
+</div>

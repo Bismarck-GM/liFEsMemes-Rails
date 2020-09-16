@@ -1,0 +1,26 @@
+<% votes = @article.votes.count %>
+
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-three-quarters">
+    <h1 class="title has-text-white has-text-centered"><%= @article.title %></h1>
+    <div class="card has-text-centered is-wide">
+      <div class="card-content pb-1">
+        <%= image_tag("#{@article.image}", class: 'is-16by9') %>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <%= link_to article_votes_path(@article), method: :post, class: 'is-size-4 orange' do %>
+              <i class="fas fa-thumbs-up"></i>
+            <% end %>
+            <%= votes %>&nbsp;<%= 'Vote'.pluralize(votes) %>
+
+            <p class="title is-4">Author: <%= @article.author.name %></p>
+            <p class="title is-6"><%= @article.text %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
