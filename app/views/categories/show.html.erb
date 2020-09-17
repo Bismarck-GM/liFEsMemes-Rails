@@ -7,7 +7,7 @@
         <% end %>
       </div>
       <div class="category-grid-item grid-item-text is-size-4 px-5 py-5">
-        <h3 class="has-text-weight-semibold orange mb-4"><%= @category.name %></h3>
+        <h3 class="has-text-weight-bold orange mb-4"><%= @category.name %></h3>
         <h5 class="has-text-weight-semibold mb-4"><%= article.title %></h5>
         <p class="is-size-5 mb-4"><%= truncate article.text, length: 300 %></p>
         <p><%= link_to 'Read More', article_path(article), class: "orange is-size-6" %></p>

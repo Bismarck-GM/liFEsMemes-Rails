@@ -14,8 +14,8 @@
     </div>
   <div id="navbarBasic" class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: space-evenly;">
-      <%= link_to 'Home', root_path, class: "navbar-item" %>
-      <%= link_to 'Create a Meme', new_article_path, class: "navbar-item" %>
+      <%= link_to 'Home', root_path, class: "navbar-item #{is_page_active(root_path)}" %>
+      <%= link_to 'Create a Meme', new_article_path, class: "navbar-item #{is_page_active(new_article_path)}" %>
     </div>
     <div class="navbar-end">
       <%= render render_navbar_links %>

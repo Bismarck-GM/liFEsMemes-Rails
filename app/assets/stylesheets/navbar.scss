@@ -1,0 +1,18 @@
+@import "variables";
+
+.main-logo {
+  background-image:url(LifesMemesWhiteBackground-01FACE-01.png);
+  width:  360px;
+  height: 70px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active {
+  color: $orange;
+}
+
+a.navbar-item:hover {
+  color: $orange;
+}
