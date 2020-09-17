@@ -1,5 +1,7 @@
-<div class="columns">
-  <%= image_tag("#{@article.image}", class: "main-article-image column" ) %>
+<div class="main-article-container columns">
+  <%= link_to article_path(@article), class: "main-article-image" do %>
+    <%= image_tag("#{@article.image}", class: "main-article-image column" ) %>
+  <% end %>
   <%= link_to article_path(@article), class: "main-article-title" do %>
     <h2><%= @article.title %></h2>
   <% end %>
@@ -9,8 +11,9 @@
 <div class="columns">
   <% @categories.each do |cat| %>
     <a href="<%= category_path(cat.id) %>" class="column">
-      <div class="category-background-images" style="background-image: url(<%= cat.image %>);">
-        <%= cat.name %>
+      <div class="category-background-images" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5074404761904762) 50%, rgba(20,20,20,1) 100%), url(<%= cat.articles.last.image %>);">
+        <h3 class="category-title"><%= cat.name %></h3>
+        <h3 class="category-article-title"><%= cat.articles.last.title %></h3>
       </div>
     </a>
   <% end %>

@@ -15,14 +15,16 @@
  */
  @import "bulma";
  @import "variables";
+ @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
+ * {
   box-sizing: border-box;
 }
 
 body, html {
   background-color: #4E443E;
   color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 .orange {
@@ -59,11 +61,40 @@ body, html {
 }
 
 .category-background-images {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 100%;
+}
+
+.category-title, .category-article-title {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+}
+
+.category-title {
+  padding: 1rem 0 0 1rem;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  top: 0%;
+}
+
+.category-article-title {
+  padding: 0 0 1rem 1rem;
+  bottom: 0%;
+}
+
+.main-article-container {
+
+}
+
+.main-article-image {
+  margin: auto;
+  flex-grow: 0;
 }
 
 .main-article-title, .main-article-description {
@@ -72,29 +103,27 @@ body, html {
 }
 
 .main-article-title {
-  bottom: 20%;
-  font-size: 3rem;
+  bottom: 6rem;
+  font-size: 2rem;
   color: $orange
 }
 
 .main-article-description {
-  bottom: 10%;
-  font-size: 2rem;
-}
-
-.main-article-image {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(0,0,0,0.011642156862745057) 100%);
+  bottom: 3rem;
+  font-size: 1rem;
 }
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
 }
 
 .item-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  color: black;
 }
 
 .item-wrapper:nth-child(3) .category-grid-item:nth-child(1), .item-wrapper:nth-child(4n+3) .category-grid-item:nth-child(1) {
@@ -103,4 +132,30 @@ body, html {
 
 .item-wrapper:nth-child(4) .category-grid-item:nth-child(1), .item-wrapper:nth-child(4n+4) .category-grid-item:nth-child(1) {
   order: 1;
+}
+
+.category-grid-images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item-text {
+  min-height: 434px;
+  word-break: break-all;
+  background:url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIAIUFxcbMxJSB1LU29t7Fq9CmCKQYTgVIivCqRBdEVaF2BRhKMSlCEUhPkVwhYQUgRUSowikEAAsxyWXIwAEXAAAAABJRU5ErkJggg==
+       ) repeat;
+  h3 {
+    text-decoration: underline;
+  }
+}
+
+
+
+/* Footer */
+
+.privacy-links {
+  display: flex;
+  flex-direction: row;
 }

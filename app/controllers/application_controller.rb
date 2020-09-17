@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   helper_method :current_user, :require_login, :user_is_logged?
 
@@ -11,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless session[:user_id]
-      flash[:notice] = ["Error. You must be logged in before doing that action."]
+      flash[:notice] = ['Error. You must be logged in before doing that action.']
       redirect_to new_session_path
     end
   end

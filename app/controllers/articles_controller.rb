@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
-  before_action :require_login, only:[:new]
+  before_action :require_login, only: [:new]
   before_action :set_categories, only: [:new]
 
   def index
-    @article = Article.first
+    @article = Article.most_voted.first
     @categories = Category.order_by_priority
   end
 
@@ -18,14 +20,14 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     else
       flash[:notice] = @article.errors.full_messages
-      redirect_back(fallback_location:new_article_path)
+      redirect_back(fallback_location: new_article_path)
     end
   end
 
   def show
     @article = Article.find(params[:id])
   end
-  
+
   private
 
   def article_params

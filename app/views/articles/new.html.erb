@@ -4,9 +4,9 @@
     <h1 class="title has-text-white has-text-centered">Create a Meme Life Article!</h1>
 
       <% if flash[:notice] %>
-        <% flash[:notice].each do |e| %>
-          <p><%= e %></p>
-        <% end %>
+
+          <p><%= flash[:notice] %></p>
+
       <% end %>
 
       <%= form_with model: @article do |f|%>

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class VotesController < ApplicationController
-  before_action :require_login, only:[:create]
+  before_action :require_login, only: [:create]
 
   def create
     if current_user.votes.exists?(article_id: params[:article_id])

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Article < ApplicationRecord
   belongs_to :author, class_name: User.name
   has_one_attached :image
@@ -8,5 +10,4 @@ class Article < ApplicationRecord
 
   scope :possess_votes, -> { select('articles.*, COUNT(votes.user_id) as votes_count').left_joins(:votes).group(:id) }
   scope :most_voted, -> { possess_votes.order(votes_count: :desc) }
-
 end
