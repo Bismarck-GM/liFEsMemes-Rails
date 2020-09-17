@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to new_user_path
+      redirect_to new_user_path, notice: 'User created succesfully'
     else
-      flash[:notice] = @user.errors.full_messages
+      flash[:alert] = @user.errors.full_messages
       redirect_to new_user_path
     end
   end

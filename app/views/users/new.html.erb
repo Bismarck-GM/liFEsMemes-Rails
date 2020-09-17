@@ -3,8 +3,8 @@
     <div class="column is-two-fifths">
     <h1 class="title has-text-white has-text-centered">Sign Up</h1>
 
-      <% if flash[:notice] %>
-        <% flash[:notice].each do |e| %>
+      <% if flash[:alert] %>
+        <% flash[:alert].each do |e| %>
           <p><%= e %></p>
         <% end %>
       <% end %>

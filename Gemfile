@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave', '~> 2.0'
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Active Storage variant

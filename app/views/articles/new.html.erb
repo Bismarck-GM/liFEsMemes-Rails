@@ -3,10 +3,12 @@
     <div class="column is-two-fifths">
     <h1 class="title has-text-white has-text-centered">Create a Meme Life Article!</h1>
 
-      <% if flash[:notice] %>
-
-          <p><%= flash[:notice] %></p>
-
+      <% if flash[:alert] %>
+        <div class="has-text-centered is-danger">
+          <% flash[:alert].each do |error| %>
+           <p><%= error %></p>
+          <% end %>
+        </div>
       <% end %>
 
       <%= form_with model: @article do |f|%>

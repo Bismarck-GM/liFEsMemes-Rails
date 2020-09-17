@@ -4,9 +4,9 @@
     <h1 class="title has-text-white has-text-centered">Log In</h1>
 
       <% if flash[:notice] %>
-        <% flash[:notice].each do |e| %>
-          <p><%= e %></p>
-        <% end %>
+
+          <p><%= flash[:notice] %></p>
+
       <% end %>
 
       <%= form_tag sessions_path do %>

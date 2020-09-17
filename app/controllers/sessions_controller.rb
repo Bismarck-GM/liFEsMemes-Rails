@@ -9,17 +9,17 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user&.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:notice] = ['Logged in successfully.']
+      flash[:notice] = 'Logged in successfully.'
       redirect_to new_session_path
     else
-      flash[:notice] = ['Invalid Combination']
+      flash[:alert] = 'Invalid Combination'
       redirect_back(fallback_location: new_session_path)
     end
   end
 
   def destroy
     reset_session
-    flash[:notice] = ['Logged out successfully.']
+    flash[:notice] = 'Logged out successfully.'
     redirect_to new_session_path
   end
 end

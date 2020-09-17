@@ -16,10 +16,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      flash[:notice] = ['Meme created successfully.']
+      flash[:notice] = 'Meme created successfully.'
       redirect_to root_path
     else
-      flash[:notice] = @article.errors.full_messages
+      flash[:alert] = @article.errors.full_messages
       redirect_back(fallback_location: new_article_path)
     end
   end
