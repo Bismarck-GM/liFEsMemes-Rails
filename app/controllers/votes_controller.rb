@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class VotesController < ApplicationController
   before_action :require_login, only: [:create]
 

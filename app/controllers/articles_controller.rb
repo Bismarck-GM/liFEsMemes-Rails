@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ArticlesController < ApplicationController
   before_action :require_login, only: [:new]
   before_action :set_categories, only: [:new]

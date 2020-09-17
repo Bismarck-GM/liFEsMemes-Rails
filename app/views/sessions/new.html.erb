@@ -2,13 +2,6 @@
   <div class="columns is-centered">
     <div class="column is-two-fifths">
     <h1 class="title has-text-white has-text-centered">Log In</h1>
-
-      <% if flash[:notice] %>
-
-          <p><%= flash[:notice] %></p>
-
-      <% end %>
-
       <%= form_tag sessions_path do %>
         <div class="card">
 
