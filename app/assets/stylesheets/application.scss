@@ -18,6 +18,7 @@
  @import "variables";
  @import "navbar";
  @import "categories";
+ @import "footer";
 
  * {
   box-sizing: border-box;
@@ -104,18 +105,8 @@ body, html {
 
 .main-article-title {
   bottom: 6rem;
-  font-size: 2rem;
-  color: $orange
 }
 
 .main-article-description {
   bottom: 3rem;
-  font-size: 1rem;
-}
-
-/* Footer */
-
-.privacy-links {
-  display: flex;
-  flex-direction: row;
 }

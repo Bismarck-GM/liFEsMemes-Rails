@@ -2,10 +2,10 @@
   <%= link_to article_path(@article), class: "main-article-image" do %>
     <%= image_tag("#{@article.image}", class: "main-article-image column px-4 py-4" ) %>
   <% end %>
-  <%= link_to article_path(@article), class: "main-article-title" do %>
+  <%= link_to article_path(@article), class: "main-article-title is-size-1 orange" do %>
     <h2><%= @article.title %></h2>
   <% end %>
-  <h4 class="main-article-description"><%= @article.text %></h4>
+  <h4 class="main-article-description is-size-4"><%= truncate @article.text, length: 75 %></h4>
 </div>
 
 <div class="columns">
