@@ -11,7 +11,7 @@ RSpec.describe 'Session Authentication', type: :feature do
     expect(page).to have_content("Hello #{user.name}")
   end
 
-  scenario 'logout', js: true do
+  scenario 'logout' do
     visit new_session_path
     fill_in 'email', with: user.email
     fill_in 'password', with: '123456'
