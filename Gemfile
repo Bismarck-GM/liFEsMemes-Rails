@@ -24,6 +24,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave', '~> 2.0'
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'fog-aws', '~> 0.7.6'
+gem 'mime-types', '~> 3.3', '>= 3.3.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -37,6 +39,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 end
 
 group :development do
