@@ -4,7 +4,4 @@ class Category < ApplicationRecord
 
   scope :order_by_priority, -> { order(priority: :asc) }
 
-  def self.category_articles(category)
-    category.articles.includes(:author, :categories).order('created_at DESC')
-  end
 end
