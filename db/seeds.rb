@@ -1,16 +1,36 @@
-# frozen_string_literal: true
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Category.create name: 'Gaming', priority: 1, image: 'https://www.fosi.org/media/images/22601782810_cbe3ede5f5_o.focus-none.original.jpg'
 Category.create name: 'Classic', priority: 2, image: 'https://ligalive.net/wp-content/uploads/2020/03/no-football-on-tv-corona-meme-1200x1200.png'
 Category.create name: 'New', priority: 3, image: 'https://duffy.agency/wp-content/uploads/2019/05/example-of-Dos-Equis-meme.png'
 Category.create name: 'Programming', priority: 4, image: 'https://digitalsynopsis.com/wp-content/uploads/2018/10/funny-memes-for-designers-2.jpg'
-bender = User.create name: 'Bender', email: 'geromorla@yahoo.com.ar', password: '123456', password_confirmation: '123456'
-bender.articles.create title: 'Bender', text: 'I\'m the greatest character ever created. Bite my shiny metal ass', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'bender-drink.jpg')), category_ids: [1, 2, 3, 4]
+bender = User.create name: 'Bender', email: 'bender@futurama.com', password: '123456', password_confirmation: '123456'
+fry = User.create name: 'Fry', email: 'fry@futurama.com', password: '123456', password_confirmation: '123456'
+leela = User.create name: 'Leela', email: 'leela@futurama.com', password: '123456', password_confirmation: '123456'
+article1 = bender.articles.create title: 'Bender', text: 'I\'m the greatest character ever created. Bite my shiny metal ass', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'bender-drink.jpg')), category_ids: [1, 2, 3, 4]
+
+bender.voted_articles << article1
+fry.voted_articles << article1
+leela.voted_articles << article1
+
+bender.articles.create title: 'AI', text: 'Much technology', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'pmeme1.png')), category_ids: 4
+fry.articles.create title: 'Front End', text: 'Let them get closer.', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'pmeme3.png')), category_ids: 4
+bender.articles.create title: 'Experienced enough?', text: 'You will never fill the requirements', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'pmeme4.png')), category_ids: 4
+bender.articles.create title: 'Front End', text: 'What does DIV even mean?', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'pmeme2.jpg')), category_ids: 4
+
+fry.articles.create title: 'Commie teammate', text: 'Theres no team in I', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme1.jpg')), category_ids: 1
+bender.articles.create title: 'That scalated quickly', text: 'Please dont\'t shoot me', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme2.jpg')), category_ids: 1
+bender.articles.create title: 'Gamer types', text: 'Which one are you?', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme3.jpg')), category_ids: 1
+leela.articles.create title: 'Good guy', text: 'He\'s just for the business', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme4.jpg')), category_ids: 1
+leela.articles.create title: 'Time to game', text: 'Unless the sun is out', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme5.jpg')), category_ids: 1
+bender.articles.create title: 'Hardcore kinder', text: 'We all sweated while playing', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'gmeme6.jpg')), category_ids: 1
+
+bender.articles.create title: 'Genius', text: 'Please go', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'cmeme1.jpg')), category_ids: 2
+fry.articles.create title: 'NO WAY!', text: 'it\'s quite accurate though!', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'cmeme2.jpg')), category_ids: 2
+bender.articles.create title: 'WHY DON\'T YOU', text: 'PLEASE', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'cmeme3.jpg')), category_ids: 2
+leela.articles.create title: 'This is fine', text: 'Trust me', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'cmeme4.jpg')), category_ids: 2
+fry.articles.create title: 'Mmmmmm', text: 'Be preppared', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'cmeme5.jpg')), category_ids: 2
+
+bender.articles.create title: 'I hear you didn\'t like graffitis', text: 'Inception comming', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'nmeme1.png')), category_ids: 3
+fry.articles.create title: 'He won\'t notice it', text: 'damn', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'nmeme2.jpg')), category_ids: 3
+bender.articles.create title: 'Playing the player', text: 'That gotta hurt', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'nmeme3.jpg')), category_ids: 3
+leela.articles.create title: 'Too real', text: 'It is', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'nmeme4.jpg')), category_ids: 3
+leela.articles.create title: 'Cheems!', text: 'But we can really play games now', image: File.new(Rails.root.join('app', 'assets', 'images', 'demo', 'nmeme5.jpg')), category_ids: 3
