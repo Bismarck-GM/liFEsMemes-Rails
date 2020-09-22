@@ -3,7 +3,7 @@ name: Deploy to Heroku
 on:
   push:
     branches:
-        - feature/websiteV0.1
+        - master
 
 jobs:
   build:

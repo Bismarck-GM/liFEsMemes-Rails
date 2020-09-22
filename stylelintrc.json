@@ -1,0 +1,10 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "csstree/validator": true
+  },
+  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "app/assets/stylesheets/98.css", "app/assets/stylesheets/flexboxgrid.min.css", "**/bootstrap*.css", "app/assets/stylesheets/main.css", "app/assets/stylesheets/fonts.scss"]
+}
