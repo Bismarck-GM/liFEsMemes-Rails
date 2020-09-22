@@ -22,10 +22,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave', '~> 2.0'
-gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'fog-aws', '~> 0.7.6'
 gem 'mime-types', '~> 3.3', '>= 3.3.1'
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -38,8 +38,8 @@ gem 'bulma-rails', '~> 0.9.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -47,12 +47,12 @@ group :development do
   gem 'database_cleaner'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'bullet', '~> 6.1'
   gem 'hirb', '~> 0.7.3'
   gem 'rubocop', '~> 0.81.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  gem 'bullet', '~> 6.1'
 end
 
 group :test do
@@ -60,9 +60,9 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
   gem 'shoulda-matchers', '~> 4.0'
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
