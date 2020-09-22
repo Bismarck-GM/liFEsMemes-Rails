@@ -1,5 +1,5 @@
 .category-background-images {
-  background-color: rgba(255, 255, 255, .15);  
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   position: relative;
   background-repeat: no-repeat;
@@ -8,7 +8,8 @@
   padding-top: 100%;
 }
 
-.category-title, .category-article-title {
+.category-title,
+.category-article-title {
   position: absolute;
   color: white;
 }
@@ -24,12 +25,14 @@
 }
 
 .main-article-container {
-  background-image: 
+  background-image:
     linear-gradient(
       0deg,
-    rgba(78,68,62,0.90) 0%,
-    rgba(78,68,62,0.97) 100%),
-      url(https://memepedia.ru/wp-content/uploads/2019/11/2.jpg);
+      rgba(78, 68, 62, 0.9) 0%,
+      rgba(78, 68, 62, 0.97) 100%
+    ),
+    url(https://memepedia.ru/wp-content/uploads/2019/11/2.jpg);
+
   img {
     max-height: 90vh;
     border-radius: 60px;
@@ -41,7 +44,8 @@
   flex-grow: 0;
 }
 
-.main-article-title, .main-article-description {
+.main-article-title,
+.main-article-description {
   position: absolute;
   padding-left: 1.5rem;
 }

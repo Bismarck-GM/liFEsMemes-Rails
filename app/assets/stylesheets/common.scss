@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-body, html {
-  background-color: #4E443E;
+body,
+html {
+  background-color: #4e443e;
   color: white;
   font-family: 'Lato', sans-serif;
 }
@@ -23,16 +24,16 @@ body, html {
 }
 
 .column {
-  padding: 0px;
+  padding: 0;
 }
 
 .columns {
-  margin: 0px;
+  margin: 0;
   position: relative;
 }
 
 .columns:not(:last-child) {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .toast-top-center {
