@@ -4,7 +4,7 @@
 
 ## Features
 - Registration & Login
-- Ability to create posts that belong to multiple categories and contain images.
+- Ability to create Meme posts that belong to multiple categories and contain images.
 - Ability to vote for posts.
 
 ![screenshot](./lifesmemes.gif)

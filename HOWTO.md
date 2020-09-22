@@ -27,8 +27,8 @@ Now to install Rails all you have to do is run `gem install rails` and you're go
 
 ## Cloning This Repository
 
-- To clone using **SSH** run `git clone git@github.com:WinterCore/rails-capstone-potato.git`
-- To clone using **HTTP** run `git clone https://github.com/WinterCore/rails-capstone-potato.git`
+- To clone using **SSH** run `git clone git@github.com:Bismarck-GM/lifestyle-articles.git`
+- To clone using **HTTP** run `git clone https://github.com/Bismarck-GM/lifestyle-articles.git`
 
 Note: In case you don't have [Git](https://git-scm.com/downloads) Installed. You can download this repo using [this link](https://github.com/WinterCore/rails-capstone-potato/archive/development.zip)
 
@@ -81,7 +81,7 @@ Note: Running this command might take some time. So feel free to go make some co
 ## Running Migrations and Seeds
 
 You can migrate the database by running `rails db:migrate`.
-If you also want to add some dummy data to work with, you can use the database seeder by running `rails db:seed`.
+For this project to work it's necesary to run the seeds: `rails db:seed`.
 Note: Make sure to run both commands in the root directory of the project.
 
 ## Starting The Application

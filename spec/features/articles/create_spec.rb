@@ -31,7 +31,7 @@ RSpec.describe 'Create new articles', type: :feature do
     fill_in 'article[title]', with: Faker::Lorem.sentence
     fill_in 'article[text]', with: Faker::Lorem.paragraph
     select category.name, from: 'article[category_ids][]'
-    attach_file('article[image]', Rails.root.join('app', 'assets', 'images', 'LifesMemesBrownBackground-01-01.png'))
+    attach_file('article[image]', Rails.root.join('public', 'LifesMemesBrownBackground-01-01.png'))
     click_button 'Create'
 
     expect(page).to have_current_path(root_path)

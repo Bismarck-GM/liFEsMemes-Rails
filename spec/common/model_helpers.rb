@@ -5,7 +5,7 @@ module ModelHelpers
     {
       title: Faker::Lorem.sentence,
       text: Faker::Lorem.paragraph,
-      image: File.new(Rails.root.join('app', 'assets', 'images', 'LifesMemesBrownBackground-01-01.png'))
+      image: File.new(Rails.root.join('public', 'LifesMemesBrownBackground-01-01.png'))
     }
   end
 
