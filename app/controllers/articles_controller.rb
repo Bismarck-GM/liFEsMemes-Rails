@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @votes = @article.votes.count
   end
 
   private

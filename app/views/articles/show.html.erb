@@ -1,4 +1,3 @@
-<% votes = @article.votes.count %>
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-three-quarters">
@@ -13,7 +12,7 @@
             <%= link_to article_votes_path(@article), method: :post, class: 'is-size-4 orange' do %>
               <i class="fas fa-thumbs-up"></i>
             <% end %>
-            <%= votes %>&nbsp;<%= 'Vote'.pluralize(votes) %>
+            <%= @votes %>&nbsp;<%= 'Vote'.pluralize(@votes) %>
 
             <p class="title is-4">Author: <%= @article.author.name %></p>
             <p class="title is-6"><%= @article.text %></p>
