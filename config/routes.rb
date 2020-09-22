@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[index create new]
   resources :sessions, only: %i[create new]
   resources :articles, only: %i[create index new show] do
-    resources :votes, only: [:create]
+    resources :votes, only: [:create, :destroy]
   end
   resources :categories, only: [:show]
   get 'log_out' => 'sessions#destroy'

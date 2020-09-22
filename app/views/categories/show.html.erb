@@ -7,10 +7,19 @@
         <% end %>
       </div>
       <div class="category-grid-item grid-item-text is-size-4 px-5 py-5">
-        <h3 class="has-text-weight-bold orange mb-4"><%= @category.name %></h3>
-        <h5 class="has-text-weight-semibold mb-4"><%= article.title %></h5>
-        <p class="is-size-5 mb-4"><%= truncate article.text, length: 300 %></p>
-        <p><%= link_to 'Read More', article_path(article), class: "orange is-size-6" %></p>
+        <h3 class="has-text-weight-bold orange"><%= @category.name %></h3>
+        <h5 class="has-text-weight-semibold"><%= article.title %></h5>
+        <p class="is-size-5"><%= truncate article.text, length: 300 %></p>
+        <div class="level is-vcentered">
+          <div class="level-left is-vcentered">
+            <h5 class="column has-text-weight-semibold is-size-5">Author: <%= article.author.name %></h5>
+          </div>
+          <div class="level-right is-size-5">
+            <%= render_like_dislike(article) %>
+            <%= article.votes.count %>&nbsp;<%= 'Vote'.pluralize(article.votes.count) %>
+          </div>
+        </div>
+          <p><%= link_to 'Read More', article_path(article), class: "orange is-size-5" %></p>
       </div>
     </div>
   <% end %>

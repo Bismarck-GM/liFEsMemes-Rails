@@ -9,9 +9,7 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <%= link_to article_votes_path(@article), method: :post, class: 'is-size-4 orange' do %>
-              <i class="fas fa-thumbs-up"></i>
-            <% end %>
+            <%= render_like_dislike(@article) %> 
             <%= @votes %>&nbsp;<%= 'Vote'.pluralize(@votes) %>
 
             <p class="title is-4">Author: <%= @article.author.name %></p>

@@ -3,6 +3,14 @@ module ApplicationHelper
     user_is_logged? ? 'partials/welcome_exit_links' : 'partials/unlogged_links'
   end
 
+  def render_like_dislike(article)
+    if already_voted?(article)
+      render partial: 'partials/dislike', locals: { article: article }
+    else
+      render partial: 'partials/like', locals: { article: article }
+    end
+  end
+
   def page_active?(path)
     'active' if current_page?(path)
   end
