@@ -42,14 +42,14 @@ RSpec.describe 'Categories Page', type: :feature do
     expect(page).to have_content(article1.votes.count)
   end
 
-  scenario 'Not allow users to vote for the same article more than once' do
+  scenario 'Allow users to un-vote' do
     login_user
     visit article_path(article1)
     click_on(class: 'is-size-4 orange')
     click_on(class: 'is-size-4 orange')
 
     article1.reload
-    expect(article1.votes.count).to eq(1)
+    expect(article1.votes.count).to eq(0)
     expect(page).to have_content(article1.votes.count)
   end
 end
