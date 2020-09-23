@@ -27,10 +27,10 @@ Now to install Rails all you have to do is run `gem install rails` and you're go
 
 ## Cloning This Repository
 
-- To clone using **SSH** run `git clone git@github.com:Bismarck-GM/lifestyle-articles.git`
-- To clone using **HTTP** run `git clone https://github.com/Bismarck-GM/lifestyle-articles.git`
+- To clone using **SSH** run `git clone git@github.com:Bismarck-GM/liFEsMemes-Rails.git`
+- To clone using **HTTP** run `git clone https://github.com/Bismarck-GM/liFEsMemes-Rails.git`
 
-Note: In case you don't have [Git](https://git-scm.com/downloads) Installed. You can download this repo using [this link](https://github.com/WinterCore/rails-capstone-potato/archive/development.zip)
+Note: In case you don't have [Git](https://git-scm.com/downloads) Installed. You can download this repo using [this link](hhttps://github.com/Bismarck-GM/liFEsMemes-Rails/archive/development.zip)
 
 
 ## Installing & configuring postgres
@@ -52,7 +52,7 @@ Sometimes you may get an error "Fatal: role "your username” does not exist", w
 
 ### Creating the project's database
 
-Lastly. You need to create a database with the name `potato_development`. You can do that by running the following command `createdb potato_development -O <your username>`. The `-O` flag sets the owner of the database (Don't forget to replace `<your username>` with your actual username)
+Lastly. You need to create a database with the name `lifestyle`. You can do that by running the following command `createdb lifestyle -O <your username>`. The `-O` flag sets the owner of the database (Don't forget to replace `<your username>` with your actual username)
 
 ### Configuring postgres
 
