@@ -1,0 +1,43 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #4e443e;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.orange {
+  color: $orange;
+}
+
+.is-orange {
+  background-color: $orange;
+}
+
+.card {
+  border-radius: 40px;
+}
+
+.column {
+  padding: 0;
+}
+
+.columns {
+  margin: 0;
+  position: relative;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.toast-top-center {
+  top: 100px;
+  margin: 0 auto;
+  right: 0%;
+}

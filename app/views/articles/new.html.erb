@@ -1,0 +1,60 @@
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-two-fifths">
+    <h1 class="title has-text-white has-text-centered">Create a Meme Life Article!</h1>
+
+      <% if flash[:alert] %>
+        <div class="has-text-centered is-danger">
+          <% flash[:alert].each do |error| %>
+           <p><%= error %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <%= form_with model: @article do |f|%>
+        <div class="card is-rounded">
+          <div class="field card-content pb-3">
+            <%= f.label :title, "Title", class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.text_field :title, class: 'input', placeholder: "Meme's title" %>
+              <span class="icon is-small is-left">
+                <i class="fas fa-space-shuttle"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :text, 'Meme\'s History', class: 'label' %>
+            <p class="control has-icons-left has-icons-right">
+              
+              <%= f.text_area :text, class: 'textarea', placeholder: 'Write sumthing' %>
+
+            </p>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :image, 'Upload your meme', class: 'label' %>
+            <%= f.file_field :image, class: 'button is-fullwidth' %>
+          </div>
+
+          <div class="field card-content pt-1 pb-1">
+            <%= f.label :category_ids, 'Categories', class: 'label' %>
+            <div class="select is-multiple is-fullwidth">
+            <%= f.select(:category_ids, @categories, {}, { multiple: true, size: 4 }) %>
+            </div>
+          </div>
+
+
+
+          <div class="control card-content pt-1 has-text-centered">
+            <%= f.submit 'Create Meme', class: 'button is-orange has-text-white' %>
+          </div>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "partials/footer" %>

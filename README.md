@@ -1,69 +1,39 @@
-# Scaffold for social media app with Ruby on Rails
+# Life Memes - Rails Application
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+## Application about memes and some info about them.
+
+## Features
+- Registration & Login
+- Ability to create Meme posts that belong to multiple categories and contain images.
+- Ability to vote for posts.
+
+![screenshot](./lifesmemes.gif)
+
+## [Live Demo](https://lifesmemes.herokuapp.com/)
+
+## [How to Run Locally & Run Rspec Tests](HOWTO.md) 
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby On Rails
+- VSCode
+- Rubocop
+- Stylelint
+- Github Actions
+- Postgresql
+- Amazon S3
 
-## Live Demo
-
-TBA
-
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+## Quick Note
+This project requires ruby >= 2.7.1.
+Please do not try to run this project using an older version of ruby. Some people tried doing that and complained about having syntax errors.
 
 ## Authors
 
-TBA
+👤 **Gerónimo Morisot**
+
+- Github: [@Bismarck-GM](https://github.com/Bismarck-GM)
+- Twitter: [@Rewritablee](https://twitter.com/Rewritablee)
+- Linkedin: [geronimomorisot](https://linkedin.com/in/geronimomorisot)
 
 ## 🤝 Contributing
 
@@ -71,15 +41,12 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-## Show your support
-
-Give a ⭐️ if you like this project!
-
 ## Acknowledgments
 
-TBA
+- Microverse
+- [Design](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+- Hasan Kharouf (@wintercore) for being a great partner, helper and inspiration.
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](lic.url) licensed.

@@ -1,0 +1,6 @@
+<div class="navbar-item">
+  Hello <%= truncate current_user.name, length: 20 %>
+</div>
+<div class="navbar-item">
+| <%= link_to 'LogOut', log_out_path, class: "navbar-item" %>
+</div>
