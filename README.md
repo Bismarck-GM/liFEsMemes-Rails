@@ -3,9 +3,9 @@
 ## Application about memes and some info about them.
 
 ## Features
-- Registration & Login
+- Registration & Login.
 - Ability to create Meme posts that belong to multiple categories and contain images.
-- Ability to vote for posts.
+- Ability to vote and un-vote posts.
 
 ![screenshot](./lifesmemes.gif)
 
