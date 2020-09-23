@@ -21,7 +21,14 @@
 - Stylelint
 - Github Actions
 - Postgresql
+- Bulma
 - Amazon S3
+- DOTENV
+- BCrypt
+- Bullet
+- CarrierWave
+- Toastr
+- Rspec / Capybara
 
 ## Quick Note
 This project requires ruby >= 2.7.1.
